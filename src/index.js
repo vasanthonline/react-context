@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { SessionContextProvider } from './session-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SessionContextProvider>
+      <App />
+    </SessionContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
